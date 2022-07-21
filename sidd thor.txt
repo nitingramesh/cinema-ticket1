@@ -1,0 +1,15 @@
+This Ticket Being Generated as You Confirm
+
+Name    : sidd
+
+Movie   : thor
+
+Location: Sunway
+
+Time    : 5PM-7PM
+
+Threator    : 1
+
+Seats   : [C-3, C-4]
+
+UniqueID: thor5PM-7PMSunwaysidd
