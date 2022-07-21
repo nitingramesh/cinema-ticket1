@@ -1005,7 +1005,7 @@ public class Java_CinemaTicket extends Application {
                 error_vbox.setPadding(new Insets(40));
                 error_vbox.setAlignment(Pos.CENTER);
                 Button ok_button = new Button("OK");
-                error_vbox.getChildren().addAll(new Label("The Report Already Generated"),ok_button);
+                error_vbox.getChildren().addAll(new Label("The Report is Generated"),ok_button);
                 Scene error_scene =new Scene(error_vbox,350,100);
                 error.setScene(error_scene);
                 error.show();
