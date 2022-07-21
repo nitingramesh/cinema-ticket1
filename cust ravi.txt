@@ -1,0 +1,15 @@
+This Ticket Being Generated as You Confirm
+
+Name    : cust
+
+Movie   : ravi
+
+Location: 4-b
+
+Time    : 8AM-9AM
+
+Threator    : 1
+
+Seats   : [A-3]
+
+UniqueID: ravi8AM-9AM4-bcust

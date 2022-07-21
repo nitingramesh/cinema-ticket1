@@ -1,3 +1,4 @@
 Customer Name,Uniqe ID,Movie Title,Location,Time,Threator,Seat
-sidd,thor5PM-7PMSunwaysidd,thor,Sunway,5PM-7PM,1,2
-sidd,thor5PM-7PMSunwaysidd,thor,Sunway,5PM-7PM,1,4
+cust,nkn5PM-7PMSunwaycust,nkn,Sunway,5PM-7PM,1,2
+cust,nkn17PM-9PMSunwaycust,nkn1,Sunway,7PM-9PM,1,2
+cust,ravi8AM-9AM4-bcust,ravi,4-b,8AM-9AM,1,2

@@ -1,0 +1,15 @@
+This Ticket Being Generated as You Confirm
+
+Name    : cust
+
+Movie   : nkn
+
+Location: Sunway
+
+Time    : 5PM-7PM
+
+Threator    : 1
+
+Seats   : [A-3]
+
+UniqueID: nkn5PM-7PMSunwaycust

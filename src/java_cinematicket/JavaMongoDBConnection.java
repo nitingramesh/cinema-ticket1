@@ -20,9 +20,9 @@ public class JavaMongoDBConnection{
     
             Connection conn =null;
             String dbuser = "root";
-            String dbpassw = "8277151577";
+            String dbpassw = "123456";
             String databasename = "java_cinemaTickets";
-            String url = "jdbc:mysql://127.0.0.1:3306/java_cinemaTickets";
+            String url = "jdbc:mysql://localhost:3306/java_cinemaTickets";
             //String driver = "com.mysql.jdbc.Driver";
             String driver = "com.mysql.cj.jdbc.Driver";
             PreparedStatement ps;
@@ -35,7 +35,8 @@ public class JavaMongoDBConnection{
             boolean login;
             Class.forName(driver);
             conn = DriverManager.getConnection(url,dbuser,dbpassw);
-            Statement st = conn.createStatement();
+            @SuppressWarnings("unused")
+			Statement st = conn.createStatement();
             
             ps = conn.prepareStatement("SELECT `customer_name`, `customer_password` FROM `customer` WHERE `customer_name` = ? AND `customer_password` = ?");
            
@@ -56,7 +57,8 @@ public class JavaMongoDBConnection{
     }
     
     
-    public boolean admin_auth(String user, String pass) throws SQLException, ClassNotFoundException{
+    @SuppressWarnings("unused")
+	public boolean admin_auth(String user, String pass) throws SQLException, ClassNotFoundException{
             boolean login;
             Class.forName(driver);
             conn = DriverManager.getConnection(url,dbuser,dbpassw);
@@ -82,7 +84,8 @@ public class JavaMongoDBConnection{
     
     
  
-    public void addMovie_insetIntoDB(String title,String description,String cinema,String time,int threator,String image,String timeID,String threatorID,String combinAll) throws ClassNotFoundException, SQLException{
+    @SuppressWarnings("unused")
+	public void addMovie_insetIntoDB(String title,String description,String cinema,String time,int threator,String image,String timeID,String threatorID,String combinAll) throws ClassNotFoundException, SQLException{
 
          Class.forName(driver);
             conn = DriverManager.getConnection(url,dbuser,dbpassw);
@@ -226,7 +229,8 @@ public class JavaMongoDBConnection{
     
     
     
-    public void addCustomer_insetIntoDB(String title,String description,String cinema,String time,String threator,int image,int timeID) throws ClassNotFoundException, SQLException{
+    @SuppressWarnings("unused")
+	public void addCustomer_insetIntoDB(String title,String description,String cinema,String time,String threator,int image,int timeID) throws ClassNotFoundException, SQLException{
 
          Class.forName(driver);
             conn = DriverManager.getConnection(url,dbuser,dbpassw);
@@ -370,6 +374,7 @@ public ObservableList reportDetails() throws ClassNotFoundException, SQLExceptio
 
 
 
+@SuppressWarnings("unused")
 public boolean validateTicket(String uniQIDforValidate) throws SQLException, ClassNotFoundException{
             boolean found;
             Class.forName(driver);

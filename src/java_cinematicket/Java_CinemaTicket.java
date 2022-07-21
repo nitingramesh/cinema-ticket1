@@ -59,7 +59,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author abdallahrizk
+
  */
 public class Java_CinemaTicket extends Application {
     
@@ -130,7 +130,7 @@ public class Java_CinemaTicket extends Application {
         login_gridPane.add(user_password, 1, 1);
 
         admin_radioButton = new RadioButton("Admin");
-        customer_radioButton = new RadioButton("Customer");
+        customer_radioButton = new RadioButton("User");
         
         radioButton_select = new ToggleGroup();
         admin_radioButton.setToggleGroup(radioButton_select);
@@ -152,7 +152,7 @@ public class Java_CinemaTicket extends Application {
         
         Scene scene = new Scene(login_pane, 300, 160);
         
-        primaryStage.setTitle("Cinema Ticket!");
+        primaryStage.setTitle("Teacher management!");
         primaryStage.setScene(scene);
         primaryStage.show();
         
@@ -173,7 +173,7 @@ public class Java_CinemaTicket extends Application {
 
         
         HBox movieChoice_raw = new HBox(5);
-        movieChoice_raw.getChildren().addAll(new Label("Select Movie: "), movie_comboBox);
+        movieChoice_raw.getChildren().addAll(new Label("Select Teacher: "), movie_comboBox);
         
         
         
@@ -226,16 +226,16 @@ public class Java_CinemaTicket extends Application {
         movieHall_comboBox.setPromptText("Please choose here");
 
         
-        right_section.add(new Label("Select the cinema: "), 0, 0);
+        right_section.add(new Label("Select the Semester: "), 0, 0);
         right_section.add(cinema_comboBox, 1, 0);
         right_section.add(new Label("Select time"), 0, 1);
         right_section.add(movieTime_comboBox, 1, 1);
-        right_section.add(new Label("Select the movie hall"), 0, 2);
+        right_section.add(new Label("Select the Class Room"), 0, 2);
         right_section.add(movieHall_comboBox, 1, 2);
         
         // the string to be change based on the login user
         
-        String userName_string = "Abdallah";
+        String userName_string = "dell";
         customerName_label = new Label("Welcome  "+userName_string);
         
         nextToSeatsChoice_button = new Button("Next");
@@ -283,12 +283,12 @@ public class Java_CinemaTicket extends Application {
         seatsImage_availbilty.setAlignment(Pos.CENTER);
         seatsNote_availbilty.setAlignment(Pos.CENTER);
         seatsImage_availbilty.getChildren().addAll(AvailableSeatsScreen,UnavailableSeatsScreen);
-        seatsNote_availbilty.getChildren().addAll(new Label("Available Seats"),new Label("UnAvailable Seats"));
+        seatsNote_availbilty.getChildren().addAll(new Label("Available Benches"),new Label("UnAvailable Benches"));
 
         
         
-        FileInputStream seatsScreen_fileInputStream = new FileInputStream("screen.png");
-        Image seatsScreen_image = new Image(seatsScreen_fileInputStream,270,30,false,false);
+        //FileInputStream seatsScreen_fileInputStream = new FileInputStream("screen.png");
+       // Image seatsScreen_image = new Image(seatsScreen_fileInputStream,270,30,false,false);
         
         ImageView seatsScreen = new ImageView(seatsScreen_image);
         ImageView[] seats = new ImageView[30];
@@ -404,19 +404,19 @@ public class Java_CinemaTicket extends Application {
         customerUniqeOrder_labelSummary = new Label();
         movieHall_labelSummary = new Label();
         
-        summary_gridPane.add(new Label("Movie Title: "),0,0);
+        summary_gridPane.add(new Label("Teacher Name: "),0,0);
         summary_gridPane.add(movieName_labelSummary,1,0);
         
-        summary_gridPane.add(new Label("Movie Location: "),0,1);
+        summary_gridPane.add(new Label("Semester: "),0,1);
         summary_gridPane.add(movieLocation_labelSummary,1,1);
         
-        summary_gridPane.add(new Label("Movie Time: "),0,2);
+        summary_gridPane.add(new Label("Class Time: "),0,2);
         summary_gridPane.add(movieTime_labelSummar,1,2);
         
-        summary_gridPane.add(new Label("Movie Threator: "),0,3);
+        summary_gridPane.add(new Label("Class Room: "),0,3);
         summary_gridPane.add(movieHall_labelSummary,1,3);
         
-        summary_gridPane.add(new Label("Seats: "),0,4);
+        summary_gridPane.add(new Label("Benches: "),0,4);
         summary_gridPane.add(movieSeats_labelSummary,1,4);
         
         summary_gridPane.add(new Label("Uniqe ID: "),0,5);
@@ -444,7 +444,7 @@ public class Java_CinemaTicket extends Application {
         
         VBox thanks_pane = new VBox(10);
         thanks_pane.setAlignment(Pos.CENTER);
-        Label thanksMessage = new Label("Your tickets being generated");
+        Label thanksMessage = new Label("You Have Enrolled To The Class");
         Label thanks_Message = new Label("Thanks");
         
         thanksMessage.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 20));
@@ -472,13 +472,13 @@ public class Java_CinemaTicket extends Application {
         adminPane.setPadding(new Insets(10,10,10,10));
         adminPane.setAlignment(Pos.CENTER);
         
-        Button addMovie_button = new Button("Add Movie");
+        Button addMovie_button = new Button("Add Teacher");
         addMovie_button.setPrefWidth(130);
-        Button deleteMovie_button = new Button("Delete Movie");
+        Button deleteMovie_button = new Button("Delete Teacher");
         deleteMovie_button.setPrefWidth(130);
         Button report_button = new Button("Report");
         report_button.setPrefWidth(130);
-        Button toValidateScene_button = new Button("Ticket Validation");
+        Button toValidateScene_button = new Button("Validation");
         toValidateScene_button.setPrefWidth(130);
 
 
@@ -498,24 +498,24 @@ public class Java_CinemaTicket extends Application {
         
         // The Avalible cinema for the admin to choose once he want to create ne movie:
         ComboBox cinemaToAdd_comboBox = new ComboBox();
-        cinemaToAdd_comboBox.getItems().add("Sunway");
-        cinemaToAdd_comboBox.getItems().add("MidVally");
-        cinemaToAdd_comboBox.getItems().add("KLCC");
+        cinemaToAdd_comboBox.getItems().add("4");
+        cinemaToAdd_comboBox.getItems().add("6");
+        cinemaToAdd_comboBox.getItems().add("8");
         cinemaToAdd_comboBox.getSelectionModel().selectFirst();
         
         ComboBox timeToAdd_comboBox = new ComboBox();
-        timeToAdd_comboBox.getItems().add("5PM-7PM");
-        timeToAdd_comboBox.getItems().add("7PM-9PM");
-        timeToAdd_comboBox.getItems().add("9PM-11PM");
-        timeToAdd_comboBox.getItems().add("11PM-1PM");
+        timeToAdd_comboBox.getItems().add("8AM-9AM");
+        timeToAdd_comboBox.getItems().add("10AM-11AM");
+        timeToAdd_comboBox.getItems().add("12PM-1PM");
+        timeToAdd_comboBox.getItems().add("2PM-3PM");
         timeToAdd_comboBox.getSelectionModel().selectFirst();
         
         ComboBox threatorToAdd_comboBox = new ComboBox();
         threatorToAdd_comboBox.getItems().add("1");
         threatorToAdd_comboBox.getItems().add("2");
         threatorToAdd_comboBox.getItems().add("3");
-        threatorToAdd_comboBox.getItems().add("3");
-        threatorToAdd_comboBox.getItems().add("3");
+        
+        
 
         threatorToAdd_comboBox.getSelectionModel().selectFirst();
         
@@ -525,20 +525,20 @@ public class Java_CinemaTicket extends Application {
         adminAdd_gridPane.setHgap(10);
         adminAdd_gridPane.setVgap(10);
         
-        adminAdd_gridPane.add(new Label("Movie Title: "),0,0);
+        adminAdd_gridPane.add(new Label("Name: "),0,0);
         adminAdd_gridPane.add(movieNameToAdd_textField,1,0);
-        adminAdd_gridPane.add(new Label("Movie Description: "),0,1);
+        adminAdd_gridPane.add(new Label("Subject: "),0,1);
         adminAdd_gridPane.add(MovieDescriptionToAdd_textArea,1,1);
-        adminAdd_gridPane.add(new Label("Cinema: "),0,2);
+        adminAdd_gridPane.add(new Label("Semester: "),0,2);
         adminAdd_gridPane.add(cinemaToAdd_comboBox,1,2);
-        adminAdd_gridPane.add(new Label("Time: "),0,3);
+        adminAdd_gridPane.add(new Label("Class Time: "),0,3);
         adminAdd_gridPane.add(timeToAdd_comboBox,1,3);
-        adminAdd_gridPane.add(new Label("Threator: "),0,4);
+        adminAdd_gridPane.add(new Label("Class Room: "),0,4);
         adminAdd_gridPane.add(threatorToAdd_comboBox,1,4);
-        adminAdd_gridPane.add(new Label("Choose Poster: "),0,5);
+        adminAdd_gridPane.add(new Label("Choose Image: "),0,5);
         adminAdd_gridPane.add(choosePoster_Button,1,5);
 
-        Button adminAddMovie_button = new Button("Add Movie");
+        Button adminAddMovie_button = new Button("Add Teacher");
         HBox adminAddMovieButton_Hbox = new HBox();
         adminAddMovieButton_Hbox.getChildren().add(adminAddMovie_button);
         adminAddMovieButton_Hbox.setAlignment(Pos.CENTER_RIGHT);
@@ -583,23 +583,23 @@ public class Java_CinemaTicket extends Application {
 
 
         VBox deleteMovie_vbox= new VBox();
-        deleteMovie_vbox.getChildren().addAll(new Label("Movie Titles"),movieName_listView);
+        deleteMovie_vbox.getChildren().addAll(new Label("Teacher Names"),movieName_listView);
         HBox deleteMovie_hbox= new HBox(20);
         deleteMovie_hbox.getChildren().addAll(deleteMovie_vbox,movieDetails_table);
         
-        TableColumn<movieDetails,String> movieNameCal=new TableColumn<>("Movie Name");
-        TableColumn<movieDetails,String> movieLocCal=new TableColumn<>("Movie Location");
-        TableColumn<movieDetails,String> movieTimCal=new TableColumn<>("Movie Time");
-        TableColumn<movieDetails,Integer> movieThreCal=new TableColumn<>("Movie Threator");
-        TableColumn<movieDetails,String> movieDesCal=new TableColumn<>("Description");
+        TableColumn<movieDetails,String> movieNameCal=new TableColumn<>("Name");
+        TableColumn<movieDetails,String> movieLocCal=new TableColumn<>("Semester");
+        TableColumn<movieDetails,String> movieTimCal=new TableColumn<>("Class Time");
+        TableColumn<movieDetails,Integer> movieThreCal=new TableColumn<>("Class Room");
+        TableColumn<movieDetails,String> movieDesCal=new TableColumn<>("Subject");
 
         
         
-        movieNameCal.setCellValueFactory(new PropertyValueFactory<>("MovieName"));
-        movieLocCal.setCellValueFactory(new PropertyValueFactory<>("Location"));
-        movieTimCal.setCellValueFactory(new PropertyValueFactory<>("Time"));
-        movieThreCal.setCellValueFactory(new PropertyValueFactory<>("Threator"));
-        movieDesCal.setCellValueFactory(new PropertyValueFactory<>("Description"));
+        movieNameCal.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        movieLocCal.setCellValueFactory(new PropertyValueFactory<>("Semester"));
+        movieTimCal.setCellValueFactory(new PropertyValueFactory<>("Class Time"));
+        movieThreCal.setCellValueFactory(new PropertyValueFactory<>("Class Room"));
+        movieDesCal.setCellValueFactory(new PropertyValueFactory<>("Subject"));
 
         
         
@@ -640,7 +640,7 @@ public class Java_CinemaTicket extends Application {
         validate_pane.setPadding(new Insets(20));
         validate_pane.setVgap(5);
         validate_pane.setHgap(5);
-        validate_pane.add(new Label("Choose Ticket To Validate"),0,0);
+        validate_pane.add(new Label("Choose Teacher To Validate"),0,0);
         validate_pane.add(ChooseTicket_button,1,0);
         validate_pane.add(new Label("To validate from Previous Report Please Specify the report"),0,1);
         validate_pane.add(ChooseReport_button,1,1);
@@ -678,7 +678,7 @@ public class Java_CinemaTicket extends Application {
                      primaryStage.show();});
         
         addMovie_button.setOnAction(e->{
-        primaryStage.setTitle("Add Movie GUI");
+        primaryStage.setTitle("Add Teacher GUI");
         primaryStage.setScene(adminAddMovie_scene);
         primaryStage.show();
         
@@ -728,7 +728,7 @@ public class Java_CinemaTicket extends Application {
         if(customer_radioButton.isSelected()==true){
              try {
                  if(db.customer_auth(userNamestring, userstring) == true){
-                     primaryStage.setTitle("Customer GUI");
+                     primaryStage.setTitle("User GUI");
                      primaryStage.setScene(customer);
                      primaryStage.show();
                  }} catch (SQLException | ClassNotFoundException ex) {
@@ -869,7 +869,7 @@ public class Java_CinemaTicket extends Application {
                 ft.play();
                 ft.setOnFinished(r->{
                     
-                    primaryStage.setTitle("Cinema Tickets");
+                    primaryStage.setTitle("Teacher Management");
                     primaryStage.setScene(scene);
                     primaryStage.show();
                 });
@@ -883,7 +883,7 @@ public class Java_CinemaTicket extends Application {
         });
        summaryLogin_button.setOnAction(e->{
            
-        primaryStage.setTitle("Cinema Tickets");
+        primaryStage.setTitle("Teacher management");
         primaryStage.setScene(scene);
         primaryStage.show();
        });
@@ -925,7 +925,7 @@ public class Java_CinemaTicket extends Application {
         
                 movieName_listView.setItems(db.movieName());
                 movieDetails_table.setItems(db.movies_tableView());
-                primaryStage.setTitle("Delete Movie Scene");
+                primaryStage.setTitle("Delete Teacher");
                 primaryStage.setScene(deleteMovie_scene);
                 primaryStage.show();
             } catch (ClassNotFoundException | SQLException ex) {
@@ -1043,7 +1043,7 @@ public class Java_CinemaTicket extends Application {
        ChooseReport_button.setOnAction(e->{
       
            FileChooser fileChooser = new FileChooser();
-                fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Choose Report", "*.csv"));                                           
+                fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Choose Report", "*.txt"));                                           
              File file = fileChooser.showOpenDialog(primaryStage);
              String reportPath = file.getPath();
                 reportPath_textField.setText(reportPath); // To extract the string path outside lembda
@@ -1111,8 +1111,8 @@ public class Java_CinemaTicket extends Application {
                 }
                 
                 if(db.validateTicket(unique)==true){
-                validateFromMysql_label.setText("Valid Ticket");              
-                }else{validateFromMysql_label.setText("Not Valid Ticket");}
+                validateFromMysql_label.setText("Valid ");              
+                }else{validateFromMysql_label.setText("Not Valid ");}
                 
                 
             } catch (FileNotFoundException ex) {
@@ -1129,7 +1129,7 @@ public class Java_CinemaTicket extends Application {
        
        backToChooseMovie_button.setOnAction(e->{
        
-        primaryStage.setTitle("Customer GUI");
+        primaryStage.setTitle("User GUI");
         primaryStage.setScene(customer);
         primaryStage.show();
        });
