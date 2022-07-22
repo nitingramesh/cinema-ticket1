@@ -25,5 +25,5 @@ JavaFx TEACHER-MANAGEMENT SYSTEM
 1:clone the repo.
 2.IMPORT the porject in eclipse
 3.add the javafx,my-sql jar files
-4.change the user name and password in ticketmanagementdbconnectionfolder 
+4.change the user name and password in teachermanagementdbconnectionfolder. 
 5.create your own database add values for admin and user and then login with the same credentials that you inserted .
