@@ -1,5 +1,5 @@
-# Cinema-Booking-System-JavaFX
-JavaFx Cinema Booking System
+#TEACHER-MANAGEMENT-JavaFX
+JavaFx TEACHER-MANAGEMENT SYSTEM
 
 **Java as a backend with frontend javafx and mysql database full Cinema Booking Cinema.Import and compile with Eclipse.
 
