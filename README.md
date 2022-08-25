@@ -1,24 +1,24 @@
 #TEACHER-MANAGEMENT-JavaFX
 JavaFx TEACHER-MANAGEMENT SYSTEM
 
-**Java as a backend with frontend javafx and mysql database full Cinema Booking Cinema.Import and compile with Eclipse.
+**Java as a backend with frontend javafx and mysql database full teacher management system.Import and compile with Eclipse.
 
 
 ##System funtionallity:
 
 **Admin:** 
 
-*add movie
-*delete movies
+*add teacher
+*show teachers
 *Report
-*check ticket validation
+*validation
 
-**Customer:** 
+**user:** 
 
-*book movie
-*pick a seat from the availble
-*confirm
-*receive ticket.
+*select teacher
+*pick a seat 
+*confirmation
+*summary scene.
 
 
 **Deployement**
